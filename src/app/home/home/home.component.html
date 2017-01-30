@@ -1,3 +1,9 @@
-<p>
-  home works!
-</p>
+<div class="row">
+  <div class="col-sm-3">
+    <app-character-list [characters]="characters$ | async"
+                        (characterSelected)="characterClicked($event)"></app-character-list>
+  </div>
+  <div class="col-sm-9">
+    <app-character-detail [character]="character"></app-character-detail>
+  </div>
+</div>
